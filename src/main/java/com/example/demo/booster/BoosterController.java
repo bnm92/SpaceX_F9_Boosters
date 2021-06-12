@@ -33,8 +33,7 @@ public class BoosterController {
     @PutMapping(path = "{boosterID}")
     public void updateBooster(
             @PathVariable("boosterID") Long boosterID,
-            @RequestParam(required = false) String serialNumber)
-    {
+            @RequestParam(required = false) String serialNumber) {
         boosterService.updateBoosterSerialNumberByID(boosterID, serialNumber);
     }
 
