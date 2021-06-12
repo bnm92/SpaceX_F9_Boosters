@@ -1,10 +1,8 @@
-package com.example.demo.student;
+package com.example.demo.studentDEMO;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import java.time.LocalDate;
-import java.time.Month;
 import java.util.List;
 
 @RestController
@@ -36,7 +34,8 @@ public class StudentController {
     public void updateStudent(
             @PathVariable("studentID") Long studentID,
             @RequestParam(required = false) String name,
-            @RequestParam(required = false) String email) {
+            @RequestParam(required = false) String email)
+    {
         studentService.updateStudent(studentID, name, email);
     }
 
