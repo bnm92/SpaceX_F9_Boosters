@@ -7,5 +7,5 @@ import java.util.Optional;
 
 public interface BoosterRepository extends JpaRepository<Booster, Long> {
     @Query("SELECT b FROM Booster b WHERE b.serialNumber = ?1")
-    Optional<Booster> findStudentBySerialNumber(String serialNumber);
+    Optional<Booster> findBoosterBySerialNumber(String serialNumber);
 }
